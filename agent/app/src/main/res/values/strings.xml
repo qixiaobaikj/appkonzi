@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 应用名称 -->
+    <string name="app_name">远程助手</string>
+    <!-- 无障碍服务描述 -->
+    <string name="accessibility_service_description">用于远程控制，帮助家人协助您使用手机</string>
+
+    <!-- SetupActivity 界面文字 -->
+    <string name="title_main">远程助手</string>
+    <string name="subtitle_main">让家人随时帮助您</string>
+    <string name="hint_server_url">例如: ws://192.168.1.100:8080</string>
+    <string name="label_server_url">服务器地址</string>
+
+    <!-- 步骤说明 -->
+    <string name="step1_title">步骤 1 · 开启无障碍服务</string>
+    <string name="step1_desc">无障碍服务用于截图和模拟触控，是远程助手的核心功能</string>
+    <string name="step1_action">前往开启</string>
+    <string name="step2_title">步骤 2 · 忽略电池优化</string>
+    <string name="step2_desc">忽略电池优化，确保应用在后台持续运行不被杀死</string>
+    <string name="step2_action">前往设置</string>
+
+    <!-- 按钮 -->
+    <string name="btn_start_service">启动服务</string>
+    <string name="btn_stop_service">停止服务</string>
+
+    <!-- 状态文字 -->
+    <string name="status_idle">服务未启动</string>
+    <string name="status_connecting">正在连接服务器…</string>
+    <string name="status_connected">✅ 已连接服务器</string>
+    <string name="status_running">✅ 服务运行中</string>
+    <string name="status_error">⚠️ 连接失败，请检查服务器地址</string>
+    <string name="status_controller_connected">🔗 控制端已连接，远程中…</string>
+    <string name="status_controller_disconnected">控制端已断开</string>
+
+    <!-- 提示 -->
+    <string name="toast_server_url_empty">请输入服务器地址</string>
+    <string name="toast_need_accessibility">请先开启无障碍服务</string>
+    <string name="notification_channel_name">远程助手服务</string>
+    <string name="notification_channel_desc">保持远程连接的后台服务</string>
+    <string name="notification_title">远程助手运行中</string>
+    <string name="notification_text">等待控制端连接…</string>
+    <string name="notification_text_connected">控制端已连接</string>
+</resources>

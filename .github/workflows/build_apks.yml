@@ -1,0 +1,66 @@
+name: Build Android APKs
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  # 支持手动在 GitHub 页面上点击触发打包
+  workflow_dispatch:
+
+jobs:
+  build-agent:
+    name: 编译被控端 (Agent)
+    runs-on: ubuntu-latest
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v4
+
+    - name: 设置 Java JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: gradle
+
+    - name: 授予 Gradle 执行权限
+      run: chmod +x agent/gradlew
+
+    - name: 编译 Debug APK
+      run: |
+        cd agent
+        ./gradlew assembleDebug
+
+    - name: 上传被控端 APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: 远程助手_被控端_Agent
+        path: agent/app/build/outputs/apk/debug/app-debug.apk
+
+  build-controller:
+    name: 编译控制端 (Controller)
+    runs-on: ubuntu-latest
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v4
+
+    - name: 设置 Java JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: gradle
+
+    - name: 授予 Gradle 执行权限
+      run: chmod +x controller/gradlew
+
+    - name: 编译 Debug APK
+      run: |
+        cd controller
+        ./gradlew assembleDebug
+
+    - name: 上传控制端 APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: 远程控制_控制端_Controller
+        path: controller/app/build/outputs/apk/debug/app-debug.apk

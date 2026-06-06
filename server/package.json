@@ -1,0 +1,17 @@
+{
+  "name": "remote-control-server",
+  "version": "1.0.0",
+  "description": "远程控制App信令服务器",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "ws": "^8.16.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

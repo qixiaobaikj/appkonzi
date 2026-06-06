@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 应用深色主题，继承 MaterialComponents DayNight NoActionBar -->
+    <style name="Theme.RemoteController" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- 主色调 -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorPrimaryVariant">@color/color_primary_variant</item>
+        <item name="colorOnPrimary">@color/color_on_primary</item>
+
+        <!-- 背景与Surface -->
+        <item name="android:colorBackground">@color/color_background</item>
+        <item name="colorSurface">@color/color_surface</item>
+        <item name="colorOnSurface">@color/color_on_surface</item>
+        <item name="colorOnBackground">@color/color_on_background</item>
+
+        <!-- 强制深色模式 -->
+        <item name="android:forceDarkAllowed">false</item>
+
+        <!-- 状态栏和导航栏 -->
+        <item name="android:statusBarColor">@color/color_background</item>
+        <item name="android:navigationBarColor">@color/color_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- 文字颜色 -->
+        <item name="android:textColorPrimary">@color/color_on_background</item>
+        <item name="android:textColorSecondary">@color/color_text_secondary</item>
+    </style>
+
+    <!-- 全屏主题（用于RemoteControlActivity） -->
+    <style name="Theme.RemoteController.Fullscreen" parent="Theme.RemoteController">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:statusBarColor">#00000000</item>
+        <item name="android:navigationBarColor">@color/color_background</item>
+    </style>
+</resources>

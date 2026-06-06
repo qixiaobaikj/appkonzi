@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">远程控制</string>
+
+    <!-- 主页面 -->
+    <string name="title_device_list">远程控制</string>
+    <string name="btn_add_device">添加设备</string>
+    <string name="btn_settings">设置</string>
+    <string name="btn_connect">连接</string>
+    <string name="btn_disconnect">断开</string>
+    <string name="hint_server_address">服务器地址 (ws://192.168.1.x:8080)</string>
+    <string name="label_no_devices">暂无在线设备</string>
+    <string name="label_no_devices_hint">请确保被控端已启动并连接到同一信令服务器</string>
+    <string name="label_server_disconnected">未连接服务器</string>
+    <string name="label_server_connected">已连接服务器</string>
+    <string name="label_server_connecting">正在连接…</string>
+
+    <!-- 设备列表 -->
+    <string name="label_device_id">设备ID: %s</string>
+    <string name="label_online">在线</string>
+    <string name="label_offline">离线</string>
+
+    <!-- 连接设置页 -->
+    <string name="title_connection_settings">连接设置</string>
+    <string name="label_server_address_input">信令服务器地址</string>
+    <string name="hint_server_url">ws://192.168.1.x:8080</string>
+    <string name="label_server_hint">请输入运行信令服务器电脑的局域网地址</string>
+    <string name="btn_save_connect">保存并连接</string>
+    <string name="btn_cancel">取消</string>
+    <string name="error_empty_address">请输入服务器地址</string>
+    <string name="error_invalid_address">地址格式不正确，请以 ws:// 开头</string>
+
+    <!-- 远程控制页 -->
+    <string name="label_connecting">正在连接…</string>
+    <string name="label_connected">已连接</string>
+    <string name="label_disconnected">已断开</string>
+    <string name="label_latency">延迟: %d ms</string>
+    <string name="label_fps">%d FPS</string>
+    <string name="btn_key_back">返回</string>
+    <string name="btn_key_home">主页</string>
+    <string name="btn_key_recent">多任务</string>
+    <string name="label_back">返回</string>
+
+    <!-- 通用 -->
+    <string name="toast_saved">设置已保存</string>
+    <string name="toast_connect_failed">连接失败，请检查服务器地址</string>
+    <string name="toast_device_offline">设备已离线</string>
+</resources>

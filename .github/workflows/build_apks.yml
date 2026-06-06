@@ -23,6 +23,9 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
+    - name: 修复换行符格式 (CRLF to LF)
+      run: sed -i 's/\r$//' agent/gradlew
+
     - name: 授予 Gradle 执行权限
       run: chmod +x agent/gradlew
 
@@ -51,6 +54,9 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
+    - name: 修复换行符格式 (CRLF to LF)
+      run: sed -i 's/\r$//' controller/gradlew
+
     - name: 授予 Gradle 执行权限
       run: chmod +x controller/gradlew
 
@@ -64,3 +70,4 @@ jobs:
       with:
         name: 远程控制_控制端_Controller
         path: controller/app/build/outputs/apk/debug/app-debug.apk
+
